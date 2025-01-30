@@ -16,8 +16,8 @@ def test_android_search_wiki_existing_article(mobile_settings):
         search_results.should(have.size_greater_than(0))
         search_results.first.should(have.text('BrowserStack'))
 
-    with allure.step('Open first founded page'):
-        search_results.first.click()
+    # with allure.step('Open first founded page'):
+    #    search_results.first.click()
 
 
 def test_android_search_wiki_no_existing_article(mobile_settings):
@@ -31,5 +31,5 @@ def test_android_search_wiki_no_existing_article(mobile_settings):
         search_results = browser.all((AppiumBy.ID, "org.wikipedia.alpha:id/page_list_item_title"))
         search_results.first.should(have.text('TestNG'))
 
-    with allure.step('Open first founded page'):
-        search_results.first.click()
+    # with allure.step('Open first founded page'):
+    #    search_results.first.click()

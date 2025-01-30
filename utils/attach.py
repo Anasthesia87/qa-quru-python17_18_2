@@ -18,10 +18,10 @@ def add_screenshot(browser):
                   attachment_type=allure.attachment_type.PNG)
 
 
-def add_video(session_id):
+def add_video(session_id, login, access_key):
     browserstack_session = requests.get(
         f'https://api.browserstack.com/app-automate/sessions/{session_id}.json',
-        auth=(config.login, config.access_key)
+        auth=(login, access_key)
     ).json()
     video_url = browserstack_session['automation_session']['video_url']
 

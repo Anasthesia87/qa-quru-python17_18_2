@@ -1,8 +1,5 @@
-import os
-
 import allure
 import allure_commons
-import attach
 import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -11,6 +8,7 @@ from selene import browser, support
 from selene.support.shared import config
 from dotenv import load_dotenv
 import os
+from utils import attach
 
 
 @pytest.fixture(scope='session', autouse=True)

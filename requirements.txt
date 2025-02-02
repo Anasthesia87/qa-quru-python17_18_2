@@ -5,6 +5,5 @@ selene~=2.0.0rc9
 selenium~=4.27.1
 allure-python-commons~=2.13.5
 requests~=2.32.3
-pydantic-settings~=2.6.1
 utils~=1.0.2
 python-dotenv~=1.0.1

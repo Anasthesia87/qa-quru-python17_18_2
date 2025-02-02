@@ -16,6 +16,7 @@ def test_android_wiki_search(mobile_settings):
         search_results.should(have.size_greater_than(0))
         search_results.first.should(have.text('BrowserStack'))
 
+
 def test_android_wiki_search_article_by_title_python(mobile_settings):
     if mobile_settings == 'ios':
         pytest.skip('Not supported on IOS')

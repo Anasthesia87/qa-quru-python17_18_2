@@ -57,7 +57,10 @@ def ios_management():
 
 
 def pytest_addoption(parser):
-    parser.addoption('--platform', default=None)
+    parser.addoption(
+        '--platform',
+        default='android'
+    )
 
 
 @pytest.fixture(scope='function', autouse=True)

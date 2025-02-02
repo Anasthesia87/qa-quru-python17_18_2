@@ -1,5 +1,3 @@
-import os
-
 import allure
 import allure_commons
 import pytest
@@ -48,13 +46,13 @@ def ios_management():
         'platformName': 'ios',
         'deviceName': 'iPhone 14 Pro Max',
         'platformVersion': '16',
-        'app': config.app,
+        'app': app,
         'bstack:options': {
             'sessionName': 'bstack_first_test',
-            'projectName': config.project,
+            'projectName': project,
             'buildName': 'browserstack-build-1',
-            "userName": config.login,
-            "accessKey": config.access_key
+            "userName": login,
+            "accessKey": access_key
         }
     })
     return options

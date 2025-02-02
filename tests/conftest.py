@@ -5,7 +5,6 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 from selene import browser, support
-from selene.support.shared import config
 from dotenv import load_dotenv
 import os
 from utils import attach
@@ -58,10 +57,7 @@ def ios_management():
 
 
 def pytest_addoption(parser):
-    parser.addoption(
-        '--platform',
-        default='ios'
-    )
+    parser.addoption('--platform', default=None)
 
 
 @pytest.fixture(scope='function', autouse=True)

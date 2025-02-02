@@ -1,3 +1,5 @@
+import os
+
 import allure
 import allure_commons
 import pytest
@@ -5,10 +7,9 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 from selene import browser, support
+from selene.support.shared import config
 from dotenv import load_dotenv
 import os
-
-from utils import attach
 
 
 @pytest.fixture(scope='session', autouse=True)
@@ -45,13 +46,13 @@ def ios_management():
         'platformName': 'ios',
         'deviceName': 'iPhone 14 Pro Max',
         'platformVersion': '16',
-        'app': app,
+        'app': config.app,
         'bstack:options': {
             'sessionName': 'bstack_first_test',
-            'projectName': project,
+            'projectName': config.project,
             'buildName': 'browserstack-build-1',
-            "userName": login,
-            "accessKey": access_key
+            "userName": config.login,
+            "accessKey": config.access_key
         }
     })
     return options

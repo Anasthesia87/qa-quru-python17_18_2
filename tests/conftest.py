@@ -43,8 +43,8 @@ def android_management():
 def ios_management():
     options = XCUITestOptions().load_capabilities({
         'platformName': 'ios',
-        'deviceName': 'iPhone 15',
-        'platformVersion': '17',
+        'deviceName': 'iPhone 12 Pro Max',
+        'platformVersion': '16',
         'app': app,
         'bstack:options': {
             'sessionName': 'bstack_first_test',

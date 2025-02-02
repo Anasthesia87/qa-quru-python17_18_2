@@ -5,7 +5,6 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.options.ios import XCUITestOptions
 from selene import browser, support
-from selene.support.shared import config
 from dotenv import load_dotenv
 import os
 

@@ -98,4 +98,4 @@ def mobile_settings(request):
     with allure.step('tear down app session'):
         browser.quit()
 
-    attach.add_video(config.session_id, config.login, config.access_key)
+    attach.add_video(session_id, login, access_key)

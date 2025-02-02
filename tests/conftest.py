@@ -62,7 +62,7 @@ def ios_management():
 def pytest_addoption(parser):
     parser.addoption(
         '--platform',
-        default='android'
+        default='ios'
     )
 
 

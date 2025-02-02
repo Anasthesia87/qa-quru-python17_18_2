@@ -9,8 +9,8 @@ def test_ios_text_input(mobile_settings):
         pytest.skip('Not supported on Android')
     with allure.step('Input text'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Text Button')).click()
-        browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Input")).send_keys('Java')
-    with allure.step('Find sended text'):
-        browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Output")).should(have.text('Java'))
+        browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Input")).send_keys('Pumpkin Eater\n')
+    with allure.step('Verify added text'):
+        browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Output")).should(have.text('Pumpkin Eater'))
 
 

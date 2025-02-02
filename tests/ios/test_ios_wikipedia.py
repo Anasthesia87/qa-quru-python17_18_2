@@ -4,9 +4,9 @@ from selene import browser, have
 import allure
 
 
-def test_ios_wiki_search(mobile_settings):
+def test_ios_text_input(mobile_settings):
     if mobile_settings == 'android':
-        pytest.skip('Not supported on Android')
+        pytest.skip('test for ios, not for android')
     with allure.step('Input text'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, 'Text Button')).click()
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Text Input")).send_keys('Pumpkin Eater\n')

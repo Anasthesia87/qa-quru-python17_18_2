@@ -1,7 +1,5 @@
 import allure
 import requests
-import config
-
 
 
 def add_xml(browser):
